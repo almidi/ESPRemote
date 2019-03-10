@@ -13,7 +13,7 @@ The board can be configured as a battery powered remote control, or as a DC powe
 
 ## Firmware
 
-Using the _[Espressif ESP-12](https://docs.platformio.org/en/latest/boards/espressif8266/esp12e.html)_ module offers great flexibility in existing firmware options. For now the board is usign the _[ESPHome](https://esphome.io/index.html)_ firmware designed for seemless intergation with the _[HomeAssistant](https://www.home-assistant.io)_ platform.
+Using the _[Espressif ESP-12](https://docs.platformio.org/en/latest/boards/espressif8266/esp12e.html)_ module offers great flexibility in existing firmware options. Currently the _[ESPHome](https://esphome.io/index.html)_ firmware is used, designed for seemless intergation with the _[HomeAssistant](https://www.home-assistant.io)_ platform.
 
 Due to the device not beign intended as a development board, an FTDI chip was excluded from the design, leaving the need for a small 6-pin SH 1.0mm micro jst connector as a UART interface.
 
