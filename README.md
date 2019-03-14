@@ -21,15 +21,15 @@ Due to the device not beign intended as a development board, an FTDI chip was ex
 
 ## I/O
 
-|                              | Pin         |
-|---------------------------|--------------|
-| Button 1              | GPIO5   |
-| Button 2              | GPIO4   |
-| Button 3              | GPIO12 |
-| Button 4              | GPIO0   |
-| Button 5              | GPIO13 |
-| Battery Voltage  | ADC      |
-| Status Led          | GPIO16 |
+|                 | Pin    |
+|-----------------|--------|
+| Button 1        | GPIO5  |
+| Button 2        | GPIO4  |
+| Button 3        | GPIO12 |
+| Button 4        | GPIO0  |
+| Button 5        | GPIO13 |
+| Battery Voltage | ADC    |
+| Status Led      | GPIO16 |
 
 
 ## PCB
