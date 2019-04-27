@@ -1,0 +1,132 @@
+esphomeyaml:
+  name: esp_remote
+  platform: ESP8266
+  board: esp12e
+
+wifi:
+  # Wifi Configuration
+  ssid: '#ssid'
+  password: '#password'
+  manual_ip:
+   # Set this to the IP of the ESP
+   static_ip: ip.of.remote
+   # Set this to the IP address of the router. Often ends with .1
+   gateway: ip.of.gateway
+   # The subnet of the network. 255.255.255.0 works for most home networks.
+   subnet: sub.net.mask
+  power_save_mode: none
+  fast_connect: on
+
+
+# Enable logging
+logger:
+  level: 'none'
+
+# Enable Home Assistant API
+api:
+  password: '#api_password'
+
+ota:
+  password: '#ota_password'
+
+# Status LED GPIO
+output:
+  - platform: esp8266_pwm
+    pin: 16
+    frequency: 500 Hz
+    id: status_led
+
+# Status LED
+light:
+  - platform: monochromatic
+    name: "STATUS"
+    id: status
+    output: status_led
+    gamma_correct: 0
+    default_transition_length: 20ms
+    internal: true
+
+# Buttons
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: 13
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Button 0"
+    id: btn0
+    filters:
+      - delayed_off: 10ms
+
+
+
+  - platform: gpio
+    pin:
+      number: 0
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Button 1"
+    id: btn1
+    filters:
+        - delayed_off: 10ms
+
+  - platform: gpio
+    pin:
+      number: 12
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Button 2"
+    id: btn2
+    filters:
+        - delayed_off: 10ms
+
+  - platform: gpio
+    pin:
+      number: 4
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Button 3"
+    id: btn3
+    filters:
+        - delayed_off: 10ms
+
+  - platform: gpio
+    pin:
+      number: 5
+      mode: INPUT_PULLUP
+      inverted: True
+    name: "Button 4"
+    id: btn4
+    filters:
+        - delayed_off: 10ms
+
+# Status ON on button press
+interval:
+  - interval: 20ms
+    then:
+    - if:
+        condition:
+          or:
+            - binary_sensor.is_on: btn0
+            - binary_sensor.is_on: btn1
+            - binary_sensor.is_on: btn2
+            - binary_sensor.is_on: btn3
+            - binary_sensor.is_on: btn4
+        then:
+          - light.turn_on: 
+              id: status  
+              brightness: 5%
+        else:
+          - light.turn_off: status
+
+# Battery level sensor
+sensor:
+  - platform: adc
+    pin: GPIO17
+    name: "Battery Charge"
+    unit_of_measurement: "%"
+    update_interval: 60s
+    filters:
+      #value mapping
+      - lambda: return (x - 0.8)/(0.2) * (100.0);
+
