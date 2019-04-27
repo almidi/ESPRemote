@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7442,7 +7442,7 @@ part number 2062-2P from STA</description>
 <part name="R5" library="audio amplifier example" library_urn="urn:adsk.eagle:library:970892" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:970937/2" value="10k"/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="D11" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="RED"/>
-<part name="R6" library="audio amplifier example" library_urn="urn:adsk.eagle:library:970892" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:970937/2" value="330"/>
+<part name="R6" library="audio amplifier example" library_urn="urn:adsk.eagle:library:970892" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:970937/2" value="1k"/>
 <part name="GND15" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND14" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun" deviceset="GND" device=""/>
@@ -7477,7 +7477,7 @@ part number 2062-2P from STA</description>
 <part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:9156882" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:9157068/2"/>
 <part name="J4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:9132365" deviceset="CONN_06" device="SMD-1MM" package3d_urn="urn:adsk.eagle:package:9132897/2"/>
 <part name="R8" library="audio amplifier example" library_urn="urn:adsk.eagle:library:970892" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:970937/2" value="10k"/>
-<part name="R9" library="audio amplifier example" library_urn="urn:adsk.eagle:library:970892" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:970937/2" value="10k"/>
+<part name="R9" library="audio amplifier example" library_urn="urn:adsk.eagle:library:970892" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:970937/2" value="3.3k"/>
 <part name="S5" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:9132704" deviceset="SWITCH-SPDT" device="-SMD-RIGHT-ANGLE" package3d_urn="urn:adsk.eagle:package:9132765/2"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="JP2" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:9142686" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK" package3d_urn="urn:adsk.eagle:package:9142725/2"/>
