@@ -42,7 +42,7 @@ Due to the device not beign intended as a development board, an FTDI chip was ex
 
 ## Enclosure
 
-The enclosure is designed to incorporate 2x 250mAh li-po cells and be 3D printed in two parts.
+The enclosure is designed to incorporate a single 400mAh li-po cell and be 3D printed in two parts.
 
 ![3D Model](Images/Enclosure.png    "Enclosure 3D Model")
 
